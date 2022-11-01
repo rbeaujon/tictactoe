@@ -1,6 +1,5 @@
 .board {
 	width: 100vw;
-
 	position: relative;
 }
 .info {
@@ -33,4 +32,109 @@
 		height: 100px;
 		background-color: rgb(108, 174, 177);
 	}
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+
+/* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
+
+
+/****** PORTRAIT *************/
+@media  only screen 	
+and (min-width : 200px) 
+and (orientation: portrait)   {
+	.info {
+		width: 100%;
+		text-align: center;
+		font-size: 14vw;
+		margin-top: 20px;
+		button {
+			width: 100px;
+			height: 25px;
+			font-size: 5vw;
+			background-color: azure;
+			border-radius: 10px;
+			box-shadow: 0px 0px 1px black;
+		}
+	}
+	.container {
+		width: 100vw;
+		position: absolute;
+		display: grid;
+		grid-template-columns: 70px 70px 70px;
+		gap: 10px;
+		padding: 0 20px;
+		transform: translate(7%, 10%);
+	
+		div {
+			width: 70px;
+			height: 70px;
+			position: relative;
+			font-size: 20vw;
+		}
+	}
+}
+
+@media  only screen 	
+  and (min-width : 360px)
+  and (orientation: portrait)   {
+
+	.info {
+		width: 100%;
+		text-align: center;
+		font-size: 15vw;
+		margin-top: 20px;
+		button {
+			width: 150px;
+			height: 50px;
+			font-size: 5vw;
+			background-color: azure;
+			border-radius: 10px;
+			box-shadow: 0px 0px 1px black;
+		}
+	}
+	.container {
+		transform: translate(8%, 30%);
+	
+		div {
+			position: relative;
+			font-size: 20vw;
+		}
+	}
+
+}
+	
+@media  only screen 	
+	and (min-width : 380px)
+	and (orientation: portrait)   {
+		.info {
+			width: 100%;
+			text-align: center;
+			font-size: 15vw;
+			margin-top: 20px;
+			button {
+				width: 100px;
+				height: 25px;
+				font-size: 4vw;
+				background-color: azure;
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px black;
+			}
+		}
+		.container {
+			width: 100vw;
+			position: absolute;
+			display: grid;
+			grid-template-columns: 100px 100px 100px;
+			gap: 10px;
+			padding: 0 20px;
+			transform: translate(2%, 15%);
+		
+			div {
+				width: 100px;
+				height: 100px;
+				position: relative;
+				font-size: 20vw;
+			}
+		}
 }

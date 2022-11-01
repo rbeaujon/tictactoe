@@ -12,8 +12,7 @@
     "sass": "^1.55.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://rbeaujon.com/tictactoe",
-  "scripts": {
+  "homepage": "http://rbeaujon.com/tictactoe/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
