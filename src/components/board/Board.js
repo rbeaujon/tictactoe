@@ -22,6 +22,7 @@ const Board = () => {
 						newList.push(column)
 						setListX(newList)
 					}
+
 					if(listO ) {
 							if(player ==="O"){
 							   let newList = [...listO];
@@ -30,9 +31,9 @@ const Board = () => {
 							}
 						} else if(player ==="O") {
 							setListO([column])
-						}
-						document.getElementById(column).innerHTML = (player)
-						setPLayer(player === "X" ? "O" : "X");
+					}
+					document.getElementById(column).innerHTML = (player)
+					setPLayer(player === "X" ? "O" : "X");
 				}
 			} else {
 				setListX([column])
