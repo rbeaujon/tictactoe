@@ -23,17 +23,17 @@ const Board = () => {
 						setListX(newList)
 					}
 					if(listO) {
-							if(!exist && player === "O"){
-							   let newList = [...listO];
-							   newList.push(column)
-							   setListO(newList)
-					}
-			
-						} else if(player ==="O") {
-							setListO([column])
+						if(player === "O"){
+							let newList = [...listO];
+							newList.push(column)
+							setListO(newList)
 						}
-						document.getElementById(column).innerHTML = (player)
-						setPLayer(player === "X" ? "O" : "X");
+			
+					}else if(player ==="O") {
+							setListO([column])
+					}
+					document.getElementById(column).innerHTML = (player)
+					setPLayer(player === "X" ? "O" : "X");
 				}
 			} else {
 				setListX([column])
@@ -58,8 +58,6 @@ const Board = () => {
 			["A3", "B2", "C1"]
 		]
 		
-		console.log("LIST X= " + listX)
-		console.log("LIST O= " + listO)
 		if(listX) {
 			const findMatch = (posibilities.map((p, index) => posibilities[index].every(i => listX.includes(i))))
 			if(findMatch.includes(true)){
