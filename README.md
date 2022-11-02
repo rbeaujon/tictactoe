@@ -19,6 +19,6 @@ is the winner.
 
 ## Game
 
-<img src="/assets/X.png" width="80%">
+<img src="/assets/X.png" width="30%">
 
-<img src="/assets/O.png" width="80%">
+<img src="/assets/O.png" width="30%">
