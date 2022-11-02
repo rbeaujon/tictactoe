@@ -22,14 +22,14 @@ const Board = () => {
 						newList.push(column)
 						setListX(newList)
 					}
-					if(listO) {
-						if(player === "O"){
-							let newList = [...listO];
-							newList.push(column)
-							setListO(newList)
-						}
-			
-					}else if(player ==="O") {
+
+					if(listO ) {
+							if(player ==="O"){
+							   let newList = [...listO];
+							   newList.push(column)
+							   setListO(newList)
+							}
+						} else if(player ==="O") {
 							setListO([column])
 					}
 					document.getElementById(column).innerHTML = (player)
@@ -44,7 +44,7 @@ const Board = () => {
 
 	}
 	const handleMatch = () => {
-
+		
 		const posibilities = [
 			["A3","A2","A1"],
 			["B1","B2","B3"],
