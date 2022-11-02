@@ -14,30 +14,33 @@ const Board = () => {
 	const handlePlayer = (column) => {
 	
 		if(win === ""){
+			const exist = (listO && listO.includes(column)) || (listX && listX.includes(column));
 			if (listX){
-
-				if(player === "X"){
-					let newList = [...listX];
-					newList.push(column)
-					setListX(newList)
-				
-				} else if(listO) {
-					let newList = [...listO];
-					newList.push(column)
-					setListO(newList)
-				} else{
-					setListO([column])
+				if(!exist){
+					if(player === "X" ){
+						let newList = [...listX];
+						newList.push(column)
+						setListX(newList)
+					}
+					if(listO) {
+							if(!exist){
+							   let newList = [...listO];
+							   newList.push(column)
+							   setListO(newList)
+					}
+			
+						} else if(player ==="O") {
+							setListO([column])
+						}
+						document.getElementById(column).innerHTML = (player)
+						setPLayer(player === "X" ? "O" : "X");
 				}
-				
-				document.getElementById(column).innerHTML = (player)
-				setPLayer(player === "X" ? "O" : "X");
-				
 			} else {
 				setListX([column])
 				document.getElementById(column).innerHTML = player
 				setPLayer("O");
 			}
-			}
+		}
 
 	}
 	const handleMatch = () => {
