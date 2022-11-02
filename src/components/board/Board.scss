@@ -1,28 +1,30 @@
 .board {
 	width: 100vw;
 	position: relative;
+	
 }
 .info {
 	width: 100%;
 	text-align: center;
-	font-size: 4vw;
+	font-size: 3vw;
 	margin-top: 20px;
 	button {
-		width: 100px;
+		width: 80px;
 		height: 25px;
 		font-size: 1vw;
 		background-color: azure;
-		border-radius: 5px;
+		border-radius: 7px;
 		box-shadow: 0px 0px 1px black;
+		
 	}
 }
 .container {
-	width: 100vw;
 	position: absolute;
 	display: grid;
 	grid-template-columns: 100px 100px 100px;
 	gap: 10px;
-	transform: translate(38%, 30%);
+	transform: translate(150%, 20%);
+	
 
 	div {
 		text-align: center;
@@ -33,6 +35,19 @@
 		background-color: rgb(108, 174, 177);
 	}
 }
+
+
+@media  only screen and (min-width : 1600px) {
+	.container {
+		grid-template-columns: 150px 150px 150px;
+		gap: 10px;
+		transform: translate(155%, 20%);
+		div {
+			width: 150px;
+			height: 150px;
+		}
+	}
+} 
 
 /* RESPONSIVE DESIGN FOR MOBILE */
 
@@ -82,23 +97,23 @@ and (orientation: portrait)   {
 	.info {
 		width: 100%;
 		text-align: center;
-		font-size: 15vw;
+		font-size: 10vw;
 		margin-top: 20px;
 		button {
-			width: 150px;
-			height: 50px;
-			font-size: 5vw;
+			width: 80px;
+			height: 25px;
+			font-size: 4vw;
 			background-color: azure;
 			border-radius: 10px;
 			box-shadow: 0px 0px 1px black;
 		}
 	}
 	.container {
-		transform: translate(8%, 30%);
+		transform: translate(10%, 30%);
 	
 		div {
 			position: relative;
-			font-size: 20vw;
+			font-size: 16vw;
 		}
 	}
 
@@ -138,3 +153,39 @@ and (orientation: portrait)   {
 			}
 		}
 }
+
+/* TABLES */
+
+@media  only screen 	
+	and (min-width : 750px)
+	and (max-width : 1115px)
+	and (orientation: portrait)   {
+		.info {
+			width: 100%;
+			text-align: center;
+			font-size: 7vw;
+			margin-top: 20px;
+			button {
+				width: 120px;
+				height: 30px;
+				font-size: 2vw;
+				background-color: rgba(240, 255, 255, 0.564);
+				border-radius: 10px;
+				box-shadow: 0px 0px 1px black;
+			}
+		}
+		.container {
+			grid-template-columns: 150px 150px 150px;
+			gap: 15px;
+			padding: 0 20px;
+			transform: translate(16%, 20%);
+		
+			div {
+				width: 150px;
+				height: 150px;
+				position: relative;
+				font-size: 15vw;
+			}
+		}
+}
+
