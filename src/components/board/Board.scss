@@ -21,19 +21,30 @@
 .container {
 	position: absolute;
 	display: grid;
-	grid-template-columns: 100px 100px 100px;
-	gap: 10px;
-	transform: translate(150%, 20%);
+	grid-template-columns: 120px 120px 120px;
+	gap: 0px;
+	transform: translate(125%, 20%);
 	
 
 	div {
 		text-align: center;
 		padding: 2px;
 		font-size: 6vw;
-		width: 100px;
-		height: 100px;
-		background-color: rgb(108, 174, 177);
+		width: 120px;
+		height: 120px;
+		// background-color: rgb(108, 174, 177);
 	}
+	$border-size: 10px solid black;
+	#A1 {border-right: $border-size; border-bottom: $border-size; }
+	#A2 {border-bottom: $border-size;}
+	#A3 {border-left: $border-size; border-bottom: $border-size;}
+	
+	#B1 {border-right: $border-size;}
+	#B3 {border-left: $border-size;}
+
+	#C1 {border-top: $border-size; border-right: $border-size ;}
+	#C2 {border-top: $border-size;}
+	#C3 {border-left: $border-size; border-top: $border-size ;}
 }
 
 
@@ -77,9 +88,8 @@ and (orientation: portrait)   {
 		position: absolute;
 		display: grid;
 		grid-template-columns: 70px 70px 70px;
-		gap: 10px;
 		padding: 0 20px;
-		transform: translate(7%, 10%);
+		transform: translate(8%, 10%);
 	
 		div {
 			width: 70px;
@@ -109,11 +119,13 @@ and (orientation: portrait)   {
 		}
 	}
 	.container {
-		transform: translate(10%, 30%);
-	
+		transform: translate(0%, 20%);
+		grid-template-columns: 100px 100px 100px;
 		div {
 			position: relative;
 			font-size: 16vw;
+			width: 100px;
+			height: 100px;
 		}
 	}
 
@@ -141,9 +153,8 @@ and (orientation: portrait)   {
 			position: absolute;
 			display: grid;
 			grid-template-columns: 100px 100px 100px;
-			gap: 10px;
 			padding: 0 20px;
-			transform: translate(2%, 15%);
+			transform: translate(4%, 15%);
 		
 			div {
 				width: 100px;
