@@ -88,7 +88,7 @@ const Board = () => {
 	return (
 		<div className='board'>
 			<div className='info'> Winner: {win} 
-				<div><button onClick={()=> resetAll()}>Reset</button></div>
+				<div onClick={()=> resetAll()} />
 			</div>
 			
 			<div className="container">
