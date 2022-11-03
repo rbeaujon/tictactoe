@@ -88,8 +88,8 @@ const Board = () => {
 			<div className='info'> Winner: {win} 
 				<div onClick={()=> resetAll()} />
 			</div>
-			
 			<div className="container">
+
 				<div id="A1" onClick={() => handlePlayer("A1")}></div>
 				<div id="A2" onClick={() => handlePlayer("A2")}></div>
 				<div id="A3" onClick={() => handlePlayer("A3")}></div>
