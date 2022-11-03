@@ -7,9 +7,36 @@ const Board = () => {
 	const[listX, setListX] = useState();
 	const[listO, setListO] = useState();
 
+
 	useEffect(() => {
-		handleMatch()
-	},[listX,listO])
+		
+		const posibilities = [
+			["A3","A2","A1"],
+			["B1","B2","B3"],
+			["C1","C2","C3"],
+
+			["A1","B1", "C1"],
+			["A2","B2", "C2"],
+			["A3", "B3", "C3"],
+
+			["A1", "B2","C3"],
+			["A3", "B2", "C1"]
+		]
+		
+		if(listX) {
+			const findMatch = (posibilities.map((p, index) => posibilities[index].every(i => listX.includes(i))))
+			if(findMatch.includes(true)){
+				setWin("X")	
+			}
+		}
+		if(listO) {
+			const findMatch = (posibilities.map((p, index) => posibilities[index].every(i => listO.includes(i))))
+			if(findMatch.includes(true)){
+				setWin("O")	
+			}
+		}
+	
+	},[listX, listO])
 
 	const handlePlayer = (column) => {
 	
@@ -42,35 +69,6 @@ const Board = () => {
 			}
 		}
 
-	}
-	const handleMatch = () => {
-		
-		const posibilities = [
-			["A3","A2","A1"],
-			["B1","B2","B3"],
-			["C1","C2","C3"],
-
-			["A1","B1", "C1"],
-			["A2","B2", "C2"],
-			["A3", "B3", "C3"],
-
-			["A1", "B2","C3"],
-			["A3", "B2", "C1"]
-		]
-		
-		if(listX) {
-			const findMatch = (posibilities.map((p, index) => posibilities[index].every(i => listX.includes(i))))
-			if(findMatch.includes(true)){
-				setWin("X")	
-			}
-		}
-		if(listO) {
-			const findMatch = (posibilities.map((p, index) => posibilities[index].every(i => listO.includes(i))))
-			if(findMatch.includes(true)){
-				setWin("O")	
-			}
-		}
-	
 	}
 
 	const resetAll = () => {
