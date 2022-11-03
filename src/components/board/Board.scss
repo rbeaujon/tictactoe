@@ -36,6 +36,8 @@
 	grid-template-columns: 120px 120px 120px;
 	gap: 0px;
 	transform: translate(125%, 20%);
+	color: rgb(40, 41, 41);
+	font-family:fantasy;
 	
 
 	div {
@@ -45,17 +47,23 @@
 		width: 120px;
 		height: 120px;
 	}
-	$border-size: 10px solid black;
-	#A1 {border-right: $border-size; border-bottom: $border-size; }
+	$radius-A1: 0px 5px 0px 200px/20px 200px 0px 5px;
+	$radius-A3: 5px 0px 100px 10px/100px 0px 6px 0px;
+	$radius-C1: 100px 0px 5px 0px/ 5px 0px 100px 1px;
+	$radius-C3: 0px 100px 0px 7px/ 0px 5px 0px 110px;
+	$border-size: solid 5px rgb(68, 67, 67);
+
+			
+	#A1 {border-right: $border-size; border-bottom: $border-size; border-radius: $radius-A1;}
 	#A2 {border-bottom: $border-size;}
-	#A3 {border-left: $border-size; border-bottom: $border-size;}
+	#A3 {border-left: $border-size; border-bottom: $border-size;border-radius: $radius-A3;}
 	
 	#B1 {border-right: $border-size;}
 	#B3 {border-left: $border-size;}
 
-	#C1 {border-top: $border-size; border-right: $border-size ;}
+	#C1 {border-top: $border-size; border-right: $border-size; border-radius: $radius-C1;}
 	#C2 {border-top: $border-size;}
-	#C3 {border-left: $border-size; border-top: $border-size ;}
+	#C3 {border-left: $border-size; border-top: $border-size;border-radius: $radius-C3;}
 }
 
 
